@@ -11,11 +11,11 @@ void connectivity(int edges, int vertices) {
 }
 
 int main(void) {
-    int directed = 0;// ориентированность графа
-    int is_weight = 0;// взвешенность графа
+    int directed = 0;// РѕСЂРёРµРЅС‚РёСЂРѕРІР°РЅРЅРѕСЃС‚СЊ РіСЂР°С„Р°
+    int is_weight = 0;// РІР·РІРµС€РµРЅРЅРѕСЃС‚СЊ РіСЂР°С„Р°
     int c;
-    int vertices = 0;// кол-во вершин
-    int edges = 0;// кол-во ребер
+    int vertices = 0;// РєРѕР»-РІРѕ РІРµСЂС€РёРЅ
+    int edges = 0;// РєРѕР»-РІРѕ СЂРµР±РµСЂ
    
     FILE* MatrF = fopen("matr.txt", "r");
     if (MatrF == NULL) {
@@ -57,7 +57,7 @@ int main(void) {
             }
             printf("\n");
         }
-        char weight[edges];// массив взвешенных узлов
+        char weight[edges];// РјР°СЃСЃРёРІ РІР·РІРµС€РµРЅРЅС‹С… СѓР·Р»РѕРІ
         if (is_weight) {
             for (int j = 0; j < edges; j++) {
                 for (int i = 0; i < edges; i++) {
@@ -68,10 +68,10 @@ int main(void) {
             }
         }
 
-        char VertNames[vertices]; // массив вершин
+        char VertNames[vertices]; // РјР°СЃСЃРёРІ РІРµСЂС€РёРЅ
         for (int i = 0; i < vertices; i++)
             VertNames[i] = 'a' + i;
-        char Connect[edges][2];// массив соединенных вершин
+        char Connect[edges][2];// РјР°СЃСЃРёРІ СЃРѕРµРґРёРЅРµРЅРЅС‹С… РІРµСЂС€РёРЅ
         for (int j = 0; j < edges; j++) {
             int k = 0;
             for (int i = 0; i < vertices; i++) {
@@ -119,7 +119,7 @@ int main(void) {
             system("cygstart graph.png");
         }
         putchar('\n');
-        connectivity(edges, vertices); // чек на связность
+        connectivity(edges, vertices); // С‡РµРє РЅР° СЃРІСЏР·РЅРѕСЃС‚СЊ
     }
     return 0;
 }
